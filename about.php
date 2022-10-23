@@ -8,21 +8,29 @@
     $number = $_POST['number'];
     $des = $_POST['des'];
 
-    if(empty($name))
-        echo "Please enter a name to submit <br>";
-    if(empty($email))
-        echo "Please enter an email to submit <br>";
-    if(empty($number))
-        echo "Please enter a number to submit <br>";
-    if(empty($des))
-        echo "Please enter a description to submit <br>";
-    else
-    {
+    // if(empty($name))
+    //     echo '<script>alert("Please enter a name to submit")</script>';
+    // else if(empty($email))
+    //     echo "Please enter an email to submit <br>";
+    // else if(empty($number))
+    //     echo "Please enter a number to submit <br>";
+    // else if(empty($des))
+    //     echo "Please enter a description to submit <br>";
+    // else
+    //{
         $query = "INSERT INTO users (name, email, number, des) VALUES('$name', '$email', '$number', '$des')";
-        mysqli_query($con, $query);
-        echo "<p class=\"text-center text-successful\">Thank you for contacting us {$name}</p>";
+        if ($con->query($query) === TRUE) 
+        {
+            echo '<script>alert("Thank you for contacting us")</script>';
+        } 
+        else 
+        {
+            echo "Error: " . $query . "<br>" . $con->error;
+        }
+        //mysqli_query($con, query($query));
+        
 
-    }
+    //}
     echo '<a class=\"text-center\" href=index.php>Back to home Page</a>';
     //header('location:index.php');
     }

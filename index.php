@@ -119,17 +119,17 @@
    
   <div class="form-group">
     <label>Name:</label>
-    <input type="text" name="name" id="name" placeholder="Enter your full name" class="form-control">
+    <input type="text" name="name" id="name" placeholder="Enter your full name" class="form-control" required>
    </div>
    
    <div class="form-group">
     <label>Email:</label>
-    <input type="email" name="email" id="email" placeholder="Enter your email id" class="form-control">
+    <input type="email" name="email" id="email" placeholder="Enter your email id" class="form-control" required>
    </div>
 
    <div class="form-group">
     <label>Phone Number:</label>
-    <input type="number" name="number" id="number" placeholder="Enter your phone number" class="form-control">
+    <input type="number" name="number" id="number" placeholder="Enter your phone number" class="form-control" required>
    </div>
 
    <div class="form-group">
